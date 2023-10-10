@@ -29,6 +29,7 @@ app.post('/', (req, res) => {
   `;
   conn.query(query, [message, nickname]);
   res.redirect('/');
+  console.log('hh');
 });
 
 app.get('/table', async (req, res) => {

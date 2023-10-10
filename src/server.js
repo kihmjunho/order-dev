@@ -16,7 +16,7 @@ app.use('/static', express.static('static'));
 
 // app.use('/', rootRouter);
 app.get('/', async (req, res) => {
-  const [result] = await conn.query('select * from board');
+  const [result] = await conn.query('select * from board order by id DESC');
   console.log(result.length);
   return res.render('index', { result });
 });

@@ -1,0 +1,44 @@
+include mixins/message
+
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/static/styles/styles.css")
+    body
+       
+        header.header
+            p.header__logo Q
+            h1.header__question 
+                span 과거에 비해 한 가지 일에 
+                span 집중하는 것이 왜 힘들어졌나요?
+
+        
+        img.logo(src="/static/images/logo.png")
+
+        .notice
+            img.notice__icon(src="/static/images/notice.png")
+            span.count 
+            p 달렸어요
+            
+        .wrapper
+            ul.item__list
+                each messageItem in result
+                    +messageItem(messageItem)
+
+
+        form.form(method="POST")
+            .form__inner
+                img(src="/static/images/q.svg", alt="")
+                textarea.form__textarea(placeholder="의견을 입력해주세요", name="message", type="text")
+                .form__nickname 
+                    span by
+                    input.form__input(placeholder="닉네임을 입력해주세요", name="nickname", type="text")
+            .form__control 
+                button.form__button 취소
+                button.form__button 등록
+
+
+        script(src="/static/control/main.js") 

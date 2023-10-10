@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.header {
+  color: #fff;
+  display: flex;
+  gap: 25px;
+  margin-top: 8vh;
+  margin-left: 43px;
+}
+.header__logo {
+  font-size: 100px;
+}
+.header__question {
+  display: flex;
+  flex-direction: column;
+  margin-top: 44px;
+}
+
+.notice {
+  display: flex;
+  margin: 8vh 47px 24px;
+}
+.notice__icon {
+  margin-right: 8px;
+}
+.notice > p {
+  color: #fff;
+  font-size: 18px;
+}
+
+.logo {
+  position: absolute;
+  top: 90px;
+  right: 47px;
+}
+
+.count {
+  color: #adee60;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.wrapper {
+  overflow: scroll;
+  width: calc(100vw - 47px);
+  margin-left: 47px;
+}
+
+.item__list {
+  list-style: none;
+}
+.item__item {
+  display: inline-block;
+  background-image: url("/static/images/item-bg.png");
+  width: 435px;
+  height: 463px;
+  position: relative;
+  background-size: cover;
+}
+.item__message {
+  position: absolute;
+  top: 80px;
+  left: 64px;
+  font-size: 20px;
+  width: 300px;
+}
+.item__nickname {
+  position: absolute;
+  bottom: 32px;
+  right: 36.5px;
+}
+.item__nickname-text {
+  font-size: 16px;
+}
+.item__by {
+  font-size: 20px;
+  margin-right: 18px;
+}
+
+.form {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    display: none;
+  }
+  .form {
+    display: block;
+  }
+  .form__inner {
+    background: rgba(129, 68, 248, 0.05);
+    border: 1px solid rgba(129, 68, 248, 0.5);
+    width: 95vw;
+    margin: 5vw auto;
+    padding: 25px;
+    height: 100vw;
+  }
+  .form__textarea {
+    background: none;
+    width: 100%;
+    height: 75vw;
+    border: none;
+  }
+  .form__textarea::-moz-placeholder {
+    color: rgba(129, 68, 248, 0.2);
+  }
+  .form__textarea::placeholder {
+    color: rgba(129, 68, 248, 0.2);
+  }
+  .form__nickname {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
+  .form__input {
+    width: 20vw;
+    background: none;
+    border: none;
+  }
+  .form__input::-moz-placeholder {
+    color: rgba(129, 68, 248, 0.2);
+  }
+  .form__input::placeholder {
+    color: rgba(129, 68, 248, 0.2);
+  }
+  .form span {
+    font-size: 20px;
+  }
+  .form__control {
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form__button {
+    border-radius: 0;
+    width: 45vw;
+    border: none;
+    font-size: 16px;
+  }
+  .form__button:first-child {
+    height: 46px;
+    background: #f5f5f5;
+    color: #7e7e7e;
+  }
+  .form__button:last-child {
+    background: #8144f8;
+    color: #fff;
+  }
+}/*# sourceMappingURL=styles.css.map */

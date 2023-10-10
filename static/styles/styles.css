@@ -90,6 +90,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    background-color: #fff;
+  }
   .header,
   .logo,
   .notice,

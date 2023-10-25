@@ -4,3 +4,7 @@ const countEl = document.querySelector('.count');
 
 itemListEl.style.width = `${itemEls.length * 435}px`;
 countEl.innerText = `${itemEls.length}개의 코멘트가`;
+
+setTimeout(function () {
+  location.reload();
+}, 5000);

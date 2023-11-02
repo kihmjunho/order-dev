@@ -77,5 +77,9 @@ window.addEventListener('touchend', () => {
   console.log('lo');
   setTimeout(() => {
     state = true;
+    wrapper.scrollTo({
+      left: 0,
+      behavior: 'smooth',
+    });
   }, 20000);
 });

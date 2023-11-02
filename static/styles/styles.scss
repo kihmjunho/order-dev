@@ -62,10 +62,7 @@ body {
 .item {
   &__list {
     list-style: none;
-    // display: flex;
-    // overflow: scroll;
-    // width: 200%;
-    // position: absolute;
+    display: flex;
   }
 
   &__item {
@@ -82,8 +79,8 @@ body {
     top: 80px;
     left: 64px;
     font-size: 20px;
-    // border: 1px solid #000;
     width: 300px;
+    // background: #999;
   }
 
   &__nickname {

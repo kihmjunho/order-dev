@@ -56,6 +56,7 @@ body {
 
 .item__list {
   list-style: none;
+  display: flex;
 }
 .item__item {
   display: inline-block;

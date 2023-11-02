@@ -11,14 +11,17 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// import rootRouter from './feature/root/root.router';
 app.use('/static', express.static('static'));
 
-// app.use('/', rootRouter);
 app.get('/', async (req, res) => {
   const [result] = await conn.query('select * from board order by id DESC');
   console.log(result.length);
   return res.render('index', { result });
+});
+
+app.get('/api/posts', async (req, res) => {
+  const [result] = await conn.query('select * from board order by id DESC');
+  res.json(result);
 });
 
 app.post('/', (req, res) => {

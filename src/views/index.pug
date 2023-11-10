@@ -8,25 +8,25 @@ html(lang="ko")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/static/styles/styles.css")
     body
-       
-        header.header
-            p.header__logo Q
-            h1.header__question 
-                span 과거에 비해 한 가지 일에 
-                span 집중하는 것이 왜 힘들어졌나요?
+        .container
+            header.header
+                img.header__logo(src="/static/images/Q.png")
+                h1.header__question 
+                    span 나의 선택은?
+                    span 잘 하는 것 VS 하고 싶은 것
 
-        
-        img.logo(src="/static/images/logo-image.png")
-
-        .notice
-            img.notice__icon(src="/static/images/notice.png")
-            span.count 
-            p 달렸어요
             
-        .wrapper
-            ul.item__list
-                each messageItem in result
-                    +messageItem(messageItem)
+            img.logo(src="/static/images/logo-image.png")
+
+            .notice
+                img.notice__icon(src="/static/images/notice.png")
+                span.count 
+                p 달렸어요
+                
+            .wrapper
+                ul.item__list
+                    each messageItem in result
+                        +messageItem(messageItem)
 
 
         form.form(method="POST")
